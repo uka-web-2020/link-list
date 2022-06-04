@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*==================*/
+/* 全体 */
+/*==================*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: clamp(1.2rem, 1.56453vw, 1.6rem);
+  background: linear-gradient(140deg, rgba(240, 255, 0, 0.9), rgba(88, 207, 251, 0.9));
+  color: #fff;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section:nth-child(n + 2) {
+  margin-top: 30px;
+}
+
+small {
+  display: block;
+  text-align: center;
+}
+
+/*========= wrapper =========*/
+
+#wrapper {
+  min-height: 100vh;
+}
+
+/*========= container =========*/
+
+#container {
+  padding: 50px 30px 100px;
+}
+
+/*========= 見出し =========*/
+
+h1 {
+  font-size: clamp(2.4rem, 3.12907vw, 3.2rem);
+  text-align: center;
+}
+
+h2 {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  font-size: clamp(1.8rem, 2.3468vw, 2.4rem);
+  text-align: center;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1.95567vw, 1.9rem);
+}
+
+/*========= ボタン =========*/
+
+.link-btn {
+  display: block;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 20%);
+  padding: 10px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.link-btn:nth-child(n + 2) {
+  margin-top: 20px;
+}
+
+/*========= footer =========*/
+
+#footer {
+  padding: 0 30px 100px;
+}
+
+/*========= ページトップ =========*/
+
+/*リンクの形状*/
+#page-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#page-top a:hover {
+  background: #fff;
+  color: lightgray;
+}
+
+#page-top {
+  position: fixed;
+  right: 10px;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+#page-top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#page-top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+
+/*==================*/
+/* 固有 */
+/*==================*/
+
+/*========= section-1 =========*/
+#section-1 .profile-img {
+  margin: 20px 25%;
+}
+
+#section-1 .profile-img img {
+  clip-path: circle();
+  margin: 0 auto;
+}
