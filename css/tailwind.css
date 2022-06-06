@@ -59,10 +59,6 @@ h1 {
 }
 
 h2 {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   font-size: clamp(1.8rem, 2.3468vw, 2.4rem);
   text-align: center;
 }
@@ -160,6 +156,12 @@ h3 {
 }
 
 #section-1 .profile-img img {
-  clip-path: circle();
+  clip-path: circle(49%);
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  #section-1 .profile-img img {
+    clip-path: circle(50%);
+  }
 }
